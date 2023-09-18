@@ -1,3 +1,4 @@
+let clrs;
 let currentyOpenedTab = "recent"
 function getKeyByValue(object, targetValue) {
   for (const key in object) {
@@ -106,6 +107,7 @@ reading_list.appendChild(list_item);
 
 window.addEventListener('load', ()=>{ 
     chrome.storage.sync.get(["colors"]).then((result) => {
+        clrs = result.colors
         document.getElementById("violet_name").innerHTML = result.colors["violet"];
         document.getElementById("indigo_name").innerHTML = result.colors["indigo"];
         document.getElementById("blue_name").innerHTML = result.colors["blue"];
@@ -134,14 +136,14 @@ tabs.forEach(element => {
         })
         element.className= "sidebarItem active"
         const b = element.getElementsByClassName("tooltiptext")[0].innerHTML;
-        let q = b[0].toLowerCase();
+        let q = element.getElementsByClassName("tooltiptext")[0].id[0]
         if (element.getElementsByClassName("tooltiptext")[0].id == "black_name") {
           q = 'bl'
         }
         if (element.getElementsByClassName("tooltiptext")[0].innerHTML == "Recently Added") {
           q = 'none'
         }
-        currentyOpenedTab=b.toLowerCase()
+        currentyOpenedTab=b
         update(q);
         document.getElementById("currentTabName").innerHTML = b + `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pen" style="margin-left:20px; cursor:pointer" viewBox="0 0 16 16">
         <path d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001zm-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708l-1.585-1.585z"/>
@@ -264,7 +266,7 @@ document.getElementById("currentTabName").addEventListener("click", ()=>{
   const newName = prompt("Change the name of this tab")
   if (newName != null && newName != ''){
     chrome.storage.sync.get(["colors"]).then((result) => {
-      let clrs = result.colors
+      clrs = result.colors
       clrs[getKeyByValue(clrs, currentyOpenedTab)] = newName
       chrome.storage.sync.set({"colors": clrs})
     })

@@ -11,8 +11,11 @@
         "service_worker": "src/js/background.js"
     },
     "version": "1.0",
+    "icons": {
+      "128": "src/logo128.png"
+    },
     "action": {
       "default_popup": "src/html/popup.html",
-      "default_icon": "src/logo.png"
+      "default_icon": "src/popup.png"
     }
   }
