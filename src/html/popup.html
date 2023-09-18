@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/index.css">
+    <title>Quickreader</title>
+</head>
+<body style="width:700px; height:500px;">
+    <div class="sidebar">
+        <button  class="sidebarItem active" id="recentBtn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
+            <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+            <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+          </svg>
+          <span class="tooltiptext">Recently Added</span> 
+        </button>
+          <button  class="sidebarItem" id="violetBtn">
+            <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                <!-- Circle with white border and red fill -->
+                <circle cx="12" cy="12" r="11" fill="#8F00FF" stroke="white" stroke-width="1" />
+              </svg>
+              <span id="violet_name" class="tooltiptext">Violet</span>             
+        </button>
+        <button  class="sidebarItem" id="indigoBtn">
+            <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                <!-- Circle with white border and red fill -->
+                <circle cx="12" cy="12" r="11" fill="indigo" stroke="white" stroke-width="1" />
+              </svg>              
+              <span id="indigo_name" class="tooltiptext">Indigo</span> 
+        </button>
+        <button  class="sidebarItem" id="blueBtn">
+            <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                <!-- Circle with white border and red fill -->
+                <circle cx="12" cy="12" r="11" fill="blue" stroke="white" stroke-width="1" />
+              </svg>              
+              <span id="blue_name" class="tooltiptext">Blue</span> 
+        </button>
+        <button  class="sidebarItem" id="greenBtn">
+            <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                <!-- Circle with white border and red fill -->
+                <circle cx="12" cy="12" r="11" fill="green" stroke="white" stroke-width="1" />
+              </svg>              
+              <span id="green_name" class="tooltiptext">Green</span>
+        </button>
+        <button  class="sidebarItem" id="yellowBtn">
+            <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                <!-- Circle with white border and red fill -->
+                <circle cx="12" cy="12" r="11" fill="yellow" stroke="white" stroke-width="1" />
+
+              </svg>              
+              <span id="yellow_name" class="tooltiptext">Yellow</span> 
+        </button>
+        <button  class="sidebarItem" id="orangeBtn">
+            <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                <!-- Circle with white border and red fill -->
+                <circle cx="12" cy="12" r="11" fill="orange" stroke="white" stroke-width="1" />
+              </svg>              
+              <span id="orange_name" class="tooltiptext">Orange</span> 
+        </button>
+        
+        <button  class="sidebarItem" id="redBtn">
+            <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                <!-- Circle with white border and red fill -->
+                <circle cx="12" cy="12" r="11" fill="red" stroke="white" stroke-width="1" />
+              </svg>        
+              <span id="red_name" class="tooltiptext">Red</span>       
+        </button>
+        <button  class="sidebarItem" id="blackBtn">
+            <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                <!-- Circle with white border and red fill -->
+                <circle cx="12" cy="12" r="11" fill="black" stroke="white" stroke-width="1" />
+              </svg>              
+              <span id="black_name" class="tooltiptext">Black</span> 
+        </button>
+        <br><br><br><hr style="width:30px;border-color:grey"><br>
+        <button class="sidebarItem" id="addBtn" style="position:absolute;bottom:0px;left:0px;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"/>
+              </svg>
+              <span class="tooltiptext">Add Current Tab</span> 
+        </button>
+        <div id="newModal" class="modal">
+            
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <br><br><br>
+              <input type="text" id="pagename"><br><br><span style="font-size: 18px;">Add To</span> 
+              <select name="group" id="group_select" style="margin-left:90px; width:200px;">
+                <option id="v" value="v"></option>
+                <option id="i" value="i"></option>
+                <option id="b" value="b"></option>
+                <option id="g" value="g"></option>
+                <option id="y" value="y"></option>
+                <option id="o" value="o"></option>
+                <option id="r" value="r"></option>
+                <option id="bl" value="bl"></option>
+              </select><br><br>
+              <button class="modal-btn" id="addBtnModal">Add To List</button>
+            </div>
+          
+          </div>
+    </div><br><br>
+    <span id="currentTabName" style="margin-left:20px;font-size:25px;font-weight:300px">Recently Added</span>
+    <hr style="border-color:grey">
+    <div class="list">
+      <span></span>
+    </div>
+<script src="../js/popup.js"></script>
+</body>
+</html>
