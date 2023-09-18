@@ -2,7 +2,7 @@
 
 ![banner](banner.png)
 
-Quickreader is a chrome extension that adds a simple yet effective reading list manager.
+Quickreader is a Chrome/Edge extension that adds a simple yet effective reading list manager.
 
 ## Features
 
