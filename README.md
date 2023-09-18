@@ -15,7 +15,7 @@ Quickreader is a Chrome/Edge extension that adds a simple yet effective reading 
 1. Download the [source code `.zip` file](https://github.com/vismodo/QuickReader/archive/refs/heads/main.zip). 
 2. Extract the contents of the `.zip` file into a folder. **⚠️Make sure to extract it into a specific folder that you know you won't delete as if you do, the extension will stop working!**
 3. Enable developer mode in your Chrome/Edge extensions page.
-4. Click on "Load Unpacked" button in the extensions page and open the folder. Keep opening the subfolders until you see a `manifest.json` file. At that point, select the current folder.
+4. Click on the "Load Unpacked" button in the extensions page and open the folder. Keep opening the subfolders until you see a `manifest.json` file. At that point, select the current folder.
 5. Enable the extension (if it is disabled). 
 ### 2. Linux
 1. Download the `quickreader.crx` file from [here](https://github.com/vismodo/QuickReader/releases/latest).
