@@ -220,3 +220,18 @@ body {
 .list_item .deleteBtn:hover {
   background-color: #444444;
 }
+
+.link {
+  color:white;
+  background: transparent;
+  border: none !important ;
+  outline:none;
+  cursor:pointer;
+  position:fixed;
+  top:30px;
+  right:30px;
+}
+.link img {
+  width:20px;
+  height:20px;
+}
