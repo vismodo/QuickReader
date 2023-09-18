@@ -13,7 +13,7 @@ Quickreader is a chrome extension that adds a simple yet effective reading list 
 ## Installing
 1. Download the `quickreader.crx` file from [here](https://github.com/vismodo/QuickReader/releases/latest).
 
-2. Drag the `quickreader.crx` file into your [extentions page](chrome://extensions/). **Make sure you have developer mode enabled!**
+2. Drag the `quickreader.crx` file into your extentions page (chrome://extensions/). **Make sure you have developer mode enabled!**
 
 3. Enable the extension (if it is disabled). 
 
