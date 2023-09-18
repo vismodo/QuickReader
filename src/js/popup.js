@@ -272,4 +272,6 @@ document.getElementById("currentTabName").addEventListener("click", ()=>{
   }}
 })
 
+document.getElementsByClassName('link')[0].addEventListener("click", ()=>{chrome.tabs.create({url: 'https://github.com/vismodo/QuickReader'})})
+
 });
