@@ -4,6 +4,12 @@
 
 Quickreader is a chrome extension that adds a simple yet effective reading list manager.
 
+## Features
+
+- Add and delete pages from a reading list
+- Organise pages into 8 folders
+- Rename folders
+
 ## Installing
 1. Download the `quickreader.crx` file from [here](https://github.com/vismodo/QuickReader/releases/latest).
 
